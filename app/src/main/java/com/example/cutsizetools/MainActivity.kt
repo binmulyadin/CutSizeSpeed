@@ -1,4 +1,4 @@
-package com.example.cutsizespeed
+package com.example.cutsizetools
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.cutsizespeed.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -20,8 +21,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val activityTitle :String = resources.getString(R.string.app_name)
         this.title = activityTitle
-        // default value
-        tvSpeedUnit.text = "r/min"
 
         //editText id's for validation
         val ids = intArrayOf(
@@ -46,8 +45,8 @@ class MainActivity : AppCompatActivity() {
                 AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(parent: AdapterView<*>,
                                             view: View, position: Int, id: Long) {
-                 var iSpinnerPos : Int = position
-                 var sSizeLength = when (iSpinnerPos){
+                 val iSpinnerPos : Int = position
+                 val sSizeLength = when (iSpinnerPos){
                      0 -> "297.0"
                      1 -> "420.0"
                      2 -> "257.0"
@@ -73,7 +72,7 @@ class MainActivity : AppCompatActivity() {
              //if not empty then proceed the data calculation
              //tvOutputSpeed.text ="0.0"
              val dSpeedInput: Double = etInputSpeed.text.toString().toDouble()
-             var dSizeLength: Double = etLength.text.toString().toDouble()
+             val dSizeLength: Double = etLength.text.toString().toDouble()
              val iSheets: Int = etSheets.text.toString().toInt()
              val iWebs: Int = etWebs.text.toString().toInt()
              val iPockets: Int = etPockets.text.toString().toInt()
@@ -82,7 +81,7 @@ class MainActivity : AppCompatActivity() {
              val id: Int = radio_group.checkedRadioButtonId
              if (id != -1) { // If any radio button checked from radio group
                  //Check Conversion type m/min to r/min
-                 var dOutputSpeedTV :Double = when(id){
+                 val dOutputSpeedTV :Double = when(id){
                      R.id.bRadioButton1 -> dSpeedInput * iWebs * iPockets * 1000 / dSizeLength / iSheets
                      R.id.bRadioButton2 -> dSpeedInput * dSizeLength * iSheets / 1000 / iWebs / iPockets
                      else -> 0.0
@@ -125,15 +124,12 @@ class MainActivity : AppCompatActivity() {
     // Get the selected radio button text using radio button on click listener
     fun radio_button_click(view: View) {
         // Get the clicked radio button instance
-       // val radio: RadioButton = findViewById(radio_group.checkedRadioButtonId)
-       // Toast.makeText(applicationContext,"On click : ${radio.text}",
-       //     Toast.LENGTH_SHORT).show()
-        // Change Unit Speed textView
         val iRadioCheckedId: Int = radio_group.checkedRadioButtonId
+        // Change Unit Speed textView
         if(iRadioCheckedId == R.id.bRadioButton1){
-            tvSpeedUnit.setText("r/min")
+            tvSpeedUnit.text =getString(R.string.speedUnit2)
         }else{
-            tvSpeedUnit.setText("m/min")
+            tvSpeedUnit.text = getString(R.string.speedUnit1)
         }
     }
 
