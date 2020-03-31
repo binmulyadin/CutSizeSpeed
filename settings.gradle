@@ -1,0 +1,2 @@
+rootProject.name='Cut Size Speed'
+include ':app'

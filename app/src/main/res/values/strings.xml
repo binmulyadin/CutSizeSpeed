@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Cut Size Speed Converter</string>
+    <string name="app_short_name">CutSizeTools</string>
+    <string name="action_one_title">About</string>
+
+    <string name="SelectSize">Select Size</string>
+    <string name="Length">Size Length (mm)</string>
+    <string name="Sheets">Sheets/Ream</string>
+    <string name="Webs">No. of Webs</string>
+    <string name="Pockets">No. of Pockets</string>
+
+    <string name="outputSpeed">Result</string>
+    <string name="convertedSpeed"></string>
+    <string name="inputSpeed">Speeds</string>
+    <string name="hintLength">210.0</string>
+    <string name="hintPockets">10</string>
+    <string name="hintSpeedIn">80</string>
+    <string name="hintWebs">5</string>
+    <string name="hintSheets">500</string>
+    <string name="speedUnit1">m/min</string>
+    <string name="speedUnit2">r/min</string>
+    <string name="convertSpeed"> Calculte Speed</string>
+    <string name="SpeedUnit"></string>
+    <string name="stCalculate">Convert</string>
+
+
+    <string-array name="arSizes">
+        <item>A4</item>
+        <item>A3L</item>
+        <item>B5</item>
+        <item>B4</item>
+        <item>Letter</item>
+        <item>Legal</item>
+        <item>A3S</item>
+    </string-array>
+</resources>
