@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cut Size Speed Converter</string>
+    <string name="app_name">Cut Size Tools</string>
     <string name="app_short_name">CutSizeTools</string>
     <string name="action_one_title">About</string>
 
@@ -20,7 +20,7 @@
     <string name="speedUnit1">m/min</string>
     <string name="speedUnit2">r/min</string>
     <string name="convertSpeed"> Calculte Speed</string>
-    <string name="SpeedUnit"></string>
+    <string name="SpeedUnit">"r/min"</string>
     <string name="stCalculate">Convert</string>
 
 
@@ -33,4 +33,32 @@
         <item>Legal</item>
         <item>A3S</item>
     </string-array>
+
+    <!-- Page Fragment 2-->
+    <string-array name="arGSM">
+        <item>67</item>
+        <item>75</item>
+        <item>90</item>
+    </string-array>
+
+    <string name="hintThickness">110</string>
+    <string name="hintRollDia">1600</string>
+    <string name="hintCoreDia">180</string>
+    <string name="hintSpeed2">80</string>
+    <string name="unit2">m</string>
+    <string name="unit3">hours</string>
+    <string name="calculate2">calculate</string>
+    <string name="rollLength">Roll Length</string>
+    <string name="time">Time Required</string>
+    <string name="SelectGsm">Select GSM</string>
+    <string name="thickness">Thickness (micron)</string>
+    <string name="rollDia">Roll Diameter (mm)</string>
+    <string name="coreDia">Core Diamater (mm)</string>
+    <string name="speed2">Speed (m/min)</string>
+    <string name="UnitMeters">m</string>
+    <string name="UnitHours">Hr</string>
+    <string name="UnitMinutes">min</string>
+
+
+
 </resources>

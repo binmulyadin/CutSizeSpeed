@@ -1,2 +1,2 @@
-rootProject.name='Cut Size Speed'
+rootProject.name='CutSizeTools'
 include ':app'
